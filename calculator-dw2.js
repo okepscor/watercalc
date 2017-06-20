@@ -150,7 +150,8 @@ $(function(){
 	$('#pool_minutes').keyup(function(){ calculate('outside'); });
 	
 	// BUTTONS & SUBMIT
-	$('#calcSubmit').click(calcSubmit);
+	// 2017-06-20 -- remove references to php pages
+	//$('#calcSubmit').click(calcSubmit);
 
 	$('#individual_button').click(function(){
 			$('#household_button').attr('src', 'img/household2.png');
@@ -173,7 +174,8 @@ $(function(){
 	$('#number_of_people').trigger('change');
 });
 
-function calcSubmit(){
+// 2017-06-20 -- remove references to php pages
+/* function calcSubmit(){
 	if(calcData.total_household_day){
 		parseParams($('#calcForm').formSerialize());
 		for(var i=0; i<paramKeys.length; i++){
@@ -188,7 +190,7 @@ function calcSubmit(){
 		alert('Please complete the calculator to submit a pledge.');
 	}
 	return(false);
-}
+} */
 
 function calcReset(form) {
 	document.location.href = document.location.href;
