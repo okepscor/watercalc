@@ -1,8 +1,0 @@
-<?php
-	$id = $cms->param(1);
-	if(is_numeric($id) && $id > 0){
-		PowerOfTenEvent::printReport($id);
-	}else{
-		header("Location: http://www.watermatters.org/thepowerof10");
-	}
-?>
