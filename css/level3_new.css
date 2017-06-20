@@ -1,0 +1,283 @@
+/*
+
+	this new stylesheet is a work in progress; it's goal is to simplify our html structure, eliminating extra divs like #content, .insidewrapper, #title and more
+	page changes:
+		960px wide
+		removed extra divs like .insidewrapper, #title, #content
+		#content replaces #left
+		#sidebar replaces #right
+	-dave
+
+
+	basic containers
+
+*/
+
+#content, #sidebar	{
+	xborder:1px solid red;
+	}
+
+
+
+	body	{
+		background-color:	#dedece;
+		font: 14px georgia, serif;
+		font-weight:normal;
+		margin:	0;
+		padding:	0;
+		}
+	
+	#header	{
+		font:	bold 15px "Lucida grande", "Lucida sans unicode", verdana, sans-serif;
+		margin-bottom:	20px;
+		border-bottom:	3px solid #e5e5e5;
+		}
+
+	#header a	{
+		text-decoration:	none;
+		color:	#666;
+		}
+
+#outsidehead	{
+	display:block;
+	width:960px;
+	margin:auto;
+	font:bold 11px "Lucida grande", "Lucida sans unicode", verdana, sans-serif;
+	color:#999;
+	}
+	#outsidehead a	{text-decoration:none;}
+	/* #head a:visited {color:#841313;} */
+	#outsidehead a:hover {text-decoration:underline;color:#a50021;}
+
+#outsidehead-bluelink	{
+	display:block;
+	width:960px;
+	margin:auto;
+	font:bold 11px "Lucida grande", "Lucida sans unicode", verdana, sans-serif;
+	color:#999;
+	}
+	#outsidehead-bluelink a	{text-decoration:none;}
+	#outsidehead-bluelink a:visited {color:#6795C9;} 
+	#outsidehead-bluelink a:hover {text-decoration:underline;color:#3577C5;}
+
+	
+/* new banner html: <p id="banner"><a href="http://www.swfwmd.state.fl.us">Return to our home page</a></p> */
+
+
+	#banner	{
+		background:	#000 url("/img/logo2.gif") center 0 no-repeat;
+		margin:	0 0 20px 0;
+		text-indent:	-9000px;
+		}
+	#banner a	{
+		display:	block;
+		height:	34px;
+		
+		}
+
+	
+	#wrapper	{
+		width:	900px;
+		margin:	0 auto;
+		background:	#fff;
+		padding:	30px;
+		border:	3px solid #D5D5C8;
+		text-align:	left;
+		}
+
+
+	#content	{
+		float:	left;
+		width:	533px;
+		}
+
+
+	#sidebar	{
+		float:	right;
+		width:	305px;
+		padding-left:	30px;
+		border-left:	2px solid #e5e5e5;
+		}
+
+
+	#footer	{
+		padding-top:	60px;
+		clear:	both;
+		text-align:	right;
+		}
+	#footer img, .image-hover img	{
+		opacity:0.5;
+		filter:alpha(opacity=50);
+		}
+	#footer img:hover, .image-hover:hover img	{
+		opacity:1;
+		filter:alpha(opacity=100);
+		}
+
+#contactfoot	{
+	margin-top:	20px;
+	margin-bottom:	50px;
+	padding:	15px;
+	background:	#f5f5f1;
+	}
+#contactfoot p	{
+	font:	10px verdana, sans-serif;
+	text-align: center;
+	margin:	0;
+	}
+    #contactfoot p .cite {color:#666;}
+
+
+h1	{
+	font:	 32px georgia, serif;
+	margin:	15px 0;
+	}
+h1 span	{
+	display:	block;
+	color:	#7896ab;
+	font-size:	22px;
+	}
+
+h2	{
+	font:	 26px georgia, serif;
+	margin-top:	0;
+	}
+#sidebar h2	{
+	font:	bold 15px georgia, serif;
+	margin-top:	0;
+	}
+h3	{
+	font-size:	17px;
+	font-weight:	bold;
+	}
+h4	{
+	font-size:	12px;
+	text-transform:	uppercase;
+	}
+p, li, dd, dt	{
+	margin-top:	0;
+	line-height:	1.4em;
+	}
+
+p+h2, ul+h2, ol+h2, div+h2	{
+	margin-top:	35px;
+	}
+
+img	{
+	border:	0;
+	}
+a	{
+	color:	#599859;
+	}
+a:visited	{
+	color:	#515151;
+	}
+a:hover	{
+	color:	#000;
+	}
+a.pdf	{
+	padding-right:	13px;
+	background:	url("/img/pdf.gif") no-repeat 100% 50%;
+	}
+
+.clear	{
+	clear:	both;
+	}
+
+a.fake_link	{
+	text-decoration:	underline;
+	cursor:	pointer;
+	}
+
+.pdf	{
+	border: 0;
+	padding-right:	13px;
+	background:	url("/img/pdf.gif") no-repeat 100% 50%;
+	}
+
+hr	{
+	border:	0;
+	border-top:	1px solid #ccc;
+	margin:	1.5em 0;
+	}
+
+ul	{
+	margin-top:	0;
+	padding-left:	30px;
+	}
+
+xform	{
+	padding:	20px;
+	background:	#F1EFE0;
+	margin:	10px 0;
+	border:	3px solid #E4E1CB;
+	}
+
+table	{
+	font:	13px "Lucida grande", "Lucida sans unicode", verdana, sans-serif;
+	border-collapse:	collapse;
+	margin-bottom:	10px;
+	}
+th	{
+	text-align: center;
+	font-size:	12px;
+	background:	#EBF3F6;
+	padding:	8px;
+	border:	1px solid #e5e5e5;
+	}
+td	{
+	text-align: right;
+	border:	1px solid #e5e5e5;
+	padding:	4px;
+	}
+
+
+.error	{
+	color:	#C40E00;
+	}
+.errorbox	{
+	background-color:	#C40E00;
+	padding:	10px 20px;
+	text-align:	center;
+	color:	#fff;
+	}
+
+
+
+#sidebar p, #sidebar li	{
+	font-size:	13px;
+	line-height:	20px;
+	}
+#sidebar p	{
+	margin-bottom:	2em;
+	}
+#sidebar ul	{
+	margin-left:	15px;
+	padding-left:	0;
+	}
+#sidebar .menu	{
+	margin:	0 0 10px 0;
+	padding:	0;
+	}
+.menu	{
+	list-style:	none;
+	}
+.menu li	{
+	margin:	0 0 10px 0;
+	}
+
+
+
+.intro	{
+	font:	16px/22px "Lucida grande", "Lucida sans unicode", verdana, sans-serif;
+	font-weight:	bold;
+	padding-bottom:	15px;
+	color:	#4E92B5;
+	}
+
+
+.right	{
+	float:	right;
+	margin:	0 0 10px 10px;
+	}
+

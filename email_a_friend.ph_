@@ -1,0 +1,65 @@
+<?php
+	$cms->auth();
+	$cms->scripts('globals, jquery, core, ajax');
+	$user = $cms->user('site_users');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-script-type" content="text/javascript" />
+	<meta http-equiv="content-style-type" content="text/css" />
+	<title>The power of 10% - pledge to reduce your water use by 10%</title>
+	<style type="text/css" media="all">
+		@import "/level3_new.css";
+		@import "calculator.css";
+	</style>
+</head>
+<body id="home">
+<p id="banner"><a href="/">www.WaterMatters.org</a></p>
+<div id="wrapper">
+	<h1 id="graphic_header"><img src="img/header_power.jpg" /></h1>
+	<form id="form" action="" method="post">
+		<input type="hidden" name="params" value="<?=$cms->encrypt("
+			event: Email,
+			key: {$cms->key()},
+			subject: Your friend wants you to take the pledge!,
+			template_html: email/power_of_ten_email_friend_html.snip,
+			template_text: email/power_of_ten_email_friend_text.snip,
+			response: query,
+			success: Your email has been sent.
+		")?>" />
+		<input type="hidden" name="required" value="from, to" />
+		<div id="sidetext">
+			<p class="intro">Water plays an important role in our lives. Because we live in a state that is surrounded by so much water, we often forget about the importance of conservation.</p>
+			<br class="clear" />
+		</div>
+		<div id="pledge">
+			<h2>Email a Friend:</h2>
+			<ul id="yourinfo">
+				<?php if(!empty($user->email)){ ?>
+				<input type="hidden" id="from" name="from" title="Your email" size="40" value="<?=$user->email?>" />
+				<?php }else{ ?>
+				<li>
+					<label for="from" title="Your email">Your email:</label><br />
+					<input type="text" id="from" name="from" title="Your email" size="40" value="" />
+				</li>
+				<?php } ?>
+				<li>
+					<label for="to" title="Friend email addresses">Friend email addresses:</label><br />
+					(seperate multiple with commas)<br />
+					<textarea id="to" name="to" title="Friend email addresses" rows="3" cols="40" style="width:100%"></textarea>
+				</li>
+				<li class="submit">
+					<button type="button" onclick="$.cms.ajax.submit({validate:1,reset:1}); return false;">Send</button>
+				</li>
+			</ul>
+		</div>
+	</form>
+	<hr class="clear" />
+	<h3>Comments or questions? <a href="mailto:webmaster@watermatters.org">Email us.</a></h3>
+	<div id="footer"></div>
+</div>
+</body>
+</html>
