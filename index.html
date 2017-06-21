@@ -21,6 +21,7 @@
 	<link type='text/css' rel='stylesheet' media='screen' charset='utf-8' href='css/calculator2012.css' />
 	<script type='text/javascript' src="js/app.js"></script>
 	<script type='text/javascript' src="calculator-dw2.js"></script>
+	<script type='text/javascript' src="city-bill.js"></script>
 </head>
 <body>
 <p id="banner"><a href="/">www.WaterMatters.org</a></p>
@@ -412,18 +413,13 @@
                                 <p class="q">
                                         <label for="city">Select your city</label>
                                         <select name="city" id="city">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
+						<!-- This will be populated byjavascript functions -->
                                         </select>
                                 </p>
                         </div>
+			<p id="monthly_bill"></p>
+			<p id="monthly_bill_reduced"></p>
+			<p id="monthly_savings"></p>
 			<!-- end of city-based bill / savings estimate -->
 
 			<br style="clear:both;" />
