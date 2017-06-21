@@ -296,7 +296,7 @@
 				<p class="q time"><input type="text" id="outside_minutes" name="outside_minutes" value="0" class="numeric" /></p>
 			</div>
 			<div class="box">
-				<img src="okstate_img/pool.jpg" alt="Pool" class="intro_image" />
+				<img src="okstate_img/pool.png" alt="Pool" class="intro_image" />
 				<h2>Pool</h2>
 				<p><label for="pool_minutes">Minutes per week filling your pool.</label></p>
 				<p class="q time"><input type="text" id="pool_minutes" name="pool_minutes" value="0" class="numeric" /></p>
@@ -402,11 +402,34 @@
 
 			<p id="button_right" ><img src="img/personal.png" alt="Your total selected" id="individual_button" width="210" />
 			<span class="total_individual_day"></span></p>
+			<br class="clear" />	
 			
-			
+
+			<!-- Show estimated bill / savings based on city -->
+			<!--<div class="box-city">-->
+			<div class="box-people">
+                                <h3 style="margin:0 0 10px 0;">Estimate Water Bill:</h3>
+                                <p class="q">
+                                        <label for="city">Select your city</label>
+                                        <select name="city" id="city">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                        </select>
+                                </p>
+                        </div>
+			<!-- end of city-based bill / savings estimate -->
+
 			<br style="clear:both;" />
 			<br />
 			<div style="background-color:#B8E5FA; height:40px; margin:10px -20px;">&nbsp;</div>
+
 			
 			<div style="background-color:#B8E5FA; padding: 0 0 20px 20px; margin:-20px -20px;">
 			
