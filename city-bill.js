@@ -74,16 +74,17 @@ var cities = {
 function calculateBill(cityname, gallons) {
     /* Calculate portions of the water bill for each block rate  */
     // between 50,000 and 200,000 gallons (and we'll also apply this rate to anything higher)
-    var bill200k = (cities[cityname].rate200k * Math.max(gallons - 50000, 0) / 1000)
+    var bill200k = (cities[cityname].rate200k * Math.max(gallons - 50000, 0) / 1000);
     // between 10,000 and 50,000 gallons
-    var bill50k = (cities[cityname].rate50k * Math.max(Math.min(gallons, 50000) - 10000, 0) / 1000)
+    var bill50k = (cities[cityname].rate50k * Math.max(Math.min(gallons, 50000) - 10000, 0) / 1000);
     // between 5,000 and 10,000 gallons
-    var bill10k = (cities[cityname].rate10k * Math.max(Math.min(gallons, 10000) - 5000, 0) / 1000)
+    var bill10k = (cities[cityname].rate10k * Math.max(Math.min(gallons, 10000) - 5000, 0) / 1000);
     // up to 5,000 gallons
-    var bill5k = (cities[cityname].rate5k * Math.min(gallons, 5000) / 1000)
+    var bill5k = (cities[cityname].rate5k * Math.min(gallons, 5000) / 1000);
 
-    // The bill will be either the minimum bill or the sum of the stepped rates, whichever is greater.
-    var bill = Math.max(cities[cityname].min, bill5k + bill10k + bill50k + bill200k)
+    var bill = cities[cityname].min + bill5k + bill10k + bill50k + bill200k;
+    //// The bill will be either the minimum bill or the sum of the stepped rates, whichever is greater.
+    //var bill = Math.max(cities[cityname].min, bill5k + bill10k + bill50k + bill200k)
 
     return bill;
 }
