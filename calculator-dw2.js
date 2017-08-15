@@ -425,7 +425,8 @@ function calculate(type){
 		var lawn = Number($('#lawn').val());
 		var lawn_minutes = Number($('#lawn_minutes').val());
 		var lawn_sensors = (Number($('#lawn_sensors').val()) == 0 && lawn_minutes > 0 && lawn > 0) ? .76 : 1;
-		var lawn_gallons = 11.67;
+		//var lawn_gallons = 11.67;
+		var lawn_gallons = 2.26;
 		calcData.lawn_gallons = lawn_gallons;
 		
 		// TOTALS
