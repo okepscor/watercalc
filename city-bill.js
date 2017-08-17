@@ -118,6 +118,11 @@ $(document).ready(function(){
     });
     $('#city').change(function(){
         updateBill();
+        // Create a log of what city was selected
+        // There should be an entry in the web server's log showing a 
+        // successful request for "city_log.html?city=selected_city".
+        // The city_log.html file is empty.
+        $.get("city_log.html", {city:$('#city option:selected').val()});
     });
 });
 
