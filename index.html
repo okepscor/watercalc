@@ -308,6 +308,21 @@
 		</div>
 
 		<div id="results_wrapper" style="min-height:800px;">
+			<!-- Show estimated bill / savings based on city -->
+			<div class="box-city">
+                                <h2 style="margin:0 0 10px 0;">Estimate Water Bill:</h3>
+                                <p class="q">
+                                        <label for="city">Select your city</label>
+                                        <select name="city" id="city">
+						<!-- This will be populated by javascript functions -->
+                                        </select>
+                                </p>
+				<p>&nbsp;</p>
+				<p id="monthly_bill"></p>
+				<p id="monthly_bill_reduced"></p>
+				<p id="monthly_savings"></p>
+                        </div>
+			<!-- end of city-based bill / savings estimate -->
 			<h2>Daily water use</h2>
 			<div class="caption" style="margin:-10px 0 20px 0;">* Rounded up to the nearest gallon.</div>
 			
@@ -406,18 +421,18 @@
 			
 
 			<!-- Show estimated bill / savings based on city -->
-			<div class="box-people">
+			<!-- <div class="box-people">
                                 <h3 style="margin:0 0 10px 0;">Estimate Water Bill:</h3>
                                 <p class="q">
                                         <label for="city">Select your city</label>
                                         <select name="city" id="city">
-						<!-- This will be populated by javascript functions -->
+						--><!-- This will be populated by javascript functions --><!--
                                         </select>
                                 </p>
                         </div>
 			<p id="monthly_bill"></p>
 			<p id="monthly_bill_reduced"></p>
-			<p id="monthly_savings"></p>
+			<p id="monthly_savings"></p> -->
 			<!-- end of city-based bill / savings estimate -->
 
 			<br style="clear:both;" />

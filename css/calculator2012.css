@@ -60,6 +60,11 @@
 	margin-top:30px;
 	border-top:#3577c5 groove 2px;
 }
+.box-city{
+	padding:10px 20px 10px 20px;
+	margin-bottom:30px;
+	border-bottom:#3577c5 groove 2px;
+}
 .jugs{
 	display: block;
 	margin: 5px 0 10px;
