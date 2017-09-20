@@ -33,11 +33,17 @@
 	font-weight: bold;
 	font-size: 23px;
 }
-#results_wrapper h2{
+#daily_use h2{
 	text-indent: -9000px;
 	width: 285px;
 	height: 35px;
 	background: url("../img/daily_use.png") no-repeat;
+}
+#estimate_bill h2{
+	text-indent: -9000px;
+	width: 285px;
+	height: 35px;
+	background: url("../okstate_img/estimate_bill.png") no-repeat;
 }
 #results_wrapper p{
 	margin-bottom: 0;
@@ -61,7 +67,7 @@
 	border-top:#3577c5 groove 2px;
 }
 .box-city{
-	padding:10px 20px 10px 20px;
+	padding:10px 0px 10px 0px;
 	margin-bottom:30px;
 	border-bottom:#3577c5 groove 2px;
 }
