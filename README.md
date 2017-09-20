@@ -1,7 +1,7 @@
 About the Water Calculator
 ==========================
 
-This online water use calculator is an extension of the original water use 
+This online water calculator is an extension of the original water use 
 calculator provided by the
 [Southwest Florida Water Management District (SWFWMD)](https://www.swfwmd.state.fl.us/). 
 It has been customized for Oklahoma and extended with a module to estimate 
@@ -43,7 +43,7 @@ block will look like `{rate_k:, startgal:, endgal:},` with numbers filled in
 for each of the fields. The `endgal` value on the highest block rate should 
 be set to `Infinity` without quotes.
 
-Here’s an example city record:
+Here's an example city record:
 ```javascript
 "ATLANTIS":{rates:[{rate_k:1.23, startgal:0, endgal:5000}, {rate_k:2.34, startgal:5000, endgal:Infinity}], min:12.00},
 ```
@@ -63,7 +63,7 @@ var cities = {
 Creating City Records from a Spreadsheet
 ----------------------------------------
 
-Most of the city water rates are derived from data purchased from the 
+Most of the city water rates are derived from data provided by the 
 [Oklahoma Municipal League (OML)](http://www.oml.org/). The OML data shows a 
 minimum charge and costs for 5,000 gallons, 10,000 gallons, 50,000 gallons, 
 and 200,000 gallons. From this, we derived four block rates: 0-5,000 gallons, 
