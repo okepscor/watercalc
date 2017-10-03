@@ -40,8 +40,10 @@ the square brackets. The comma at the end is important.
 
 One or more rate blocks need to appear between the square brackets. Each rate 
 block will look like `{rate_k:, startgal:, endgal:},` with numbers filled in 
-for each of the fields. The `endgal` value on the highest block rate should 
-be set to `Infinity` without quotes.
+for each of the fields. The field `rate_k` represents the rate per 1000 gallons
+and the fields `startgal` and `endgal` represent the beginning and end of the
+rate block measured in gallons. The `endgal` value on the highest block rate 
+should be set to `Infinity` without quotes.
 
 Here's an example city record:
 ```javascript
@@ -51,10 +53,21 @@ In this example, the city Atlantis has a minimum bill of $12.00, a first
 block rate of $1.23 per 1000 gallons up to 5000 gallons, and a second block 
 rate of $2.34 per 1000 gallons for everything over 5000 gallons.
 
-Here's an example declaration of the `cities` object with two cities:
+Here's another example with a different billing scheme:
+```javascript
+"MINAS MORGUL":{rates[{rate_k:3.75, startgal:2000, endgal:Infinity}], min:25.00},
+```
+In this example, the city Minas Morgul has a minimum bill of $25.00 which
+includes the first 2000 gallons. We can represent this by omitting the rate
+entirely (as shown) or by including an explicit rate block like this: 
+`{rate_k:0, startgal:0, endgal:2000}`. 
+
+
+Here's an example declaration of the `cities` object with three cities:
 ```javascript
 var cities = {
     "ATLANTIS":{rates:[{rate_k:1.23, startgal:0, endgal:5000}, {rate_k:2.34, startgal:5000, endgal:Infinity}], min:12.00},
+    "MINAS MORGUL":{rates[{rate_k:3.75, startgal:2000, endgal:Infinity}], min:25.00},
     "MINAS TIRITH":{rates:[{rate_k:5.66, startgal:0, endgal:5000}, {rate_k:6.72, startgal:5000, endgal:10000}, {rate_k:7.05, startgal:10000, endgal:Infinity}], min:23.00},
 };
 ```
